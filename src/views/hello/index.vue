@@ -3,7 +3,8 @@ import Hello from '@/components/Hello.vue'
 </script>
 
 <template>
-  <Hello />
+  <Hello msg="Hello View" />
+  <router-view />
 </template>
 
 <style scoped>
