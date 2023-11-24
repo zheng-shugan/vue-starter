@@ -11,7 +11,12 @@
     "composite": true,
     "types": [
       "node",
-      "NodeNext"
+      "NodeNext",
+      "vite/client",
+      "vue/ref-macros",
+      "vite-plugin-pages/client",
+      "vite-plugin-vue-layouts/client",
+      "element-plus/global"
     ]
   }
 }

@@ -7,6 +7,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 
+import { ElementPlusResolver  } from "unplugin-vue-components/resolvers";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -16,9 +18,11 @@ export default defineConfig({
       imports: ['vue', 'vue-router'],
       dirs: ['/src/router/index.d.ts'],
       dts: 'src/auto-imports.d.ts',
+      resolvers: [ElementPlusResolver()],
       vueTemplate: true,
     }),
     Components({
+      resolvers: [ElementPlusResolver()],
       dts: 'src/components.d.ts',
     }),
   ],
